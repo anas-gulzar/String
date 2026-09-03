@@ -1,1 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+  char name_1[100];
+  printf("enter first name :");
+  scanf("%s",name_1);
 
+  char name_2[100];
+  printf("enter last name :");
+  scanf("%s",name_2);
+
+  strcat(name_1, " ");
+  strcat(name_1,name_2);
+  printf("your full name is %s", name_1);
+}
