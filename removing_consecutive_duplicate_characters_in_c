@@ -1,1 +1,30 @@
+#include <stdio.h>
 
+int main() {
+int n;
+
+printf("Enter size of word: ");
+scanf("%d", &n);
+
+char str_1[100];
+char str_2[100];
+
+printf("Enter word: ");
+scanf("%99s", str_1);
+
+int j = 0;
+
+for (int i = 0; i < n; i++) {
+    if (str_1[i] != str_1[i + 1]) {
+        str_2[j] = str_1[i];
+        j++;
+    }
+}
+
+str_2[j] = '\0';
+
+printf("After removing consecutive duplicates: %s\n", str_2);
+
+return 0;
+
+}
