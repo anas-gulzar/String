@@ -1,1 +1,26 @@
+#include <stdio.h>
 
+int main() {
+  int n;
+  printf("enter size of word :");
+  scanf("%d", &n);
+  
+  char word[100];
+  printf("enter your word :");
+  scanf("%s",word);
+  
+  char target;
+  printf("enter target word :");
+  scanf(" %c", &target);
+  int count=0;
+
+  for(int i=0; i<n; i++){
+    if(word[i]== target){
+      count= count+1;
+        }
+  }
+  printf("total count is : %d", count);
+  
+
+    return 0;
+}
