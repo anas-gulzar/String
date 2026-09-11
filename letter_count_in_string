@@ -1,1 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
 
+int main() {
+   char name[]="anas";
+
+    for (int i=0; name[i]!='\0'; i++){
+
+        int visited=0;
+        for(int k=0; k<i; k++){
+            if(name[i]==name[k]){
+                visited = 1;
+                break;
+            }
+        }
+        if(visited==1){
+            continue;
+        }
+        int count=0;
+
+        for(int j=0; name[j]!='\0'; j++){
+            if(name[i]==name[j]){
+                count+=1;
+            }
+            
+        }
+        printf("%c=%d\n", name[i], count);
+    }
+    
+
+    return 0;
+}
