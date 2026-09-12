@@ -1,1 +1,16 @@
 
+#include <stdio.h>
+
+int main() {
+    char name[100];
+    printf("enter word :");
+    scanf("%s",name);
+
+    int count=0;
+    for(int i=0; name[i]!='\0'; i++){
+        count++;
+    }
+   printf("size of word is : %d", count);
+
+    return 0;
+}
