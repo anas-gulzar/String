@@ -1,1 +1,22 @@
+#include <stdio.h>
 
+int main() {
+    char str[100];
+    char arr[100];
+    printf("enter a string :");
+    fgets(str, sizeof(str), stdin);
+
+    int j=0;
+    for(int i=0; str[i]!='\0'; i++){
+        if(str[i]==' '){
+            continue;
+        }else{
+            arr[j]=str[i];
+            j++;
+        }
+    }
+
+    arr[j]='\0';
+    printf("after removing spaces : %s",arr);
+    return 0;
+}
