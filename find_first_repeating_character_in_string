@@ -1,1 +1,18 @@
+#include <stdio.h>
 
+int main() {
+    char str[100];
+    printf("enter your word :");
+    scanf("%s",str);
+
+    for(int i=0; str[i]!='\0'; i++){
+       for(int j=i+1; str[j]!='\0'; j++){
+            if(str[i]==str[j] && i!=j){
+                 printf("first repeating character is : %c",str[i]);
+                return 0;
+            }
+       }
+     }
+     printf("no repeating character found!");
+    return 0;
+}
