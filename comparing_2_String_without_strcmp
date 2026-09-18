@@ -1,1 +1,28 @@
-.
+#include <stdio.h>
+
+int main() {
+    char name1[100];
+    printf("enter first word :");
+     scanf("%s",name1);
+    
+    char name2[100];
+    printf("enter second word :");
+    scanf("%s",name2);
+    
+    int equal=1;
+
+    int i=0;
+    while(name1[i]!='\0' || name2[i]!='\0'){
+        if(name1[i]!=name2[i]){
+            equal = 0;
+            break;
+        }
+        i++;
+    }
+    if(equal==1){
+        printf("inputs are same!");
+    }else{
+        printf("inputs are not same");
+    }
+return 0;
+}
